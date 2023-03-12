@@ -11,8 +11,9 @@ function NestedSelects() {
         <h2>Nested Selects</h2>
         <h3>Mexico</h3>
         <SelectList title='state' url='' handleChange={(e) => {setState(e.target.value)}} />
-
+        <br/>
         {state && (<SelectList title='town' url='' handleChange={(e) => {setTown(e.target.value)}}/>)}
+        <br/>
         {town && (<SelectList title='suburb' url='' handleChange={(e) => {setSuburb(e.target.value)}}/>)}
         
         <pre>
