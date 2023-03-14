@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export const useFetch = () =>{
+export const useFetch = (url) =>{
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -44,5 +44,5 @@ export const useFetch = () =>{
         return () => abortController.abort();
     }, [url]);
 
-    return {data, error, loading}
+    return {data, error, loading};
 };
